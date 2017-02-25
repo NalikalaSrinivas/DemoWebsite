@@ -1,0 +1,53 @@
+﻿<script type="text/javascript">
+    
+
+
+</script>
+
+
+
+@using (Ajax.BeginForm("Index", "Account", FormMethod.Post, null))
+ {
+     <div>
+         <h2>Login</h2>
+         <table>
+             <tr>
+                 <td> @Html.Label("User Name")</td>
+             </tr>
+             <tr>
+                 <td>
+                     @Html.TextBox("userName", "", new {placeholder = "Enter your email address", @class = "user"})
+                 </td>
+             </tr>
+             <tr class="spaceUnder">
+                 <td></td>
+             </tr>
+             <tr>
+                 <td> @Html.Label("Password")</td>
+             </tr>
+             <tr>
+                 <td>
+                     @Html.Password("password","", new{placeholder = "Enter your password", @class="password"})
+                 </td>
+             </tr>
+             <tr class="spaceUnder">
+                 <td></td>
+             </tr>
+             <tr>
+                 <td>
+                     @Html.CheckBox("rememberMe", false, new{onchange="rememberMeCB()"}) <span>Remember Me </span>
+                     @Html.ActionLink("Forgot Password","Index","Account", null, new{@style="padding-left: 80px"})
+                 </td>
+             </tr>
+         </table>
+         <button type="submit" style="height: 40px; width: 310px; background : #0858a6; color: white"> Log In </button>
+         <div style="padding-top: 80px">
+            @* @Html.CheckBox("rememberMe", false) <span>Remember Me </span> 
+             @Html.ActionLink("Forgot Password","Index","Account", null, new{@style="padding-left: 80px"})
+             <br/>*@
+             <span style="padding-left: 100px"> Dont have an account? @Html.ActionLink("Sign Up","Index","Account", new{style="padding-left: 5px; color: rgb(156, 4, 18); font-weight: bold"}) </span>
+
+         </div>
+     </div>
+     
+ }

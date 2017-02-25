@@ -1,0 +1,17 @@
+﻿@using Microsoft.Ajax.Utilities
+@using PrasannaNeons
+@if (!MvcApplication.LoginUser.IsNullOrWhiteSpace())
+{
+    <text>
+        
+            Welcome, @Html.ActionLink(MvcApplication.LoginUser, "Index", "Account", routeValues: null, htmlAttributes: new {@class = "username", title = "Manage"})!
+        
+       @* @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new {id = "logoutForm"}))
+        {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        }*@
+    </text>
+}
+
+

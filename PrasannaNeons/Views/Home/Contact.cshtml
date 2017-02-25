@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+    var myCenter = new google.maps.LatLng(17.370921, 78.502934);
+
+    function initialize() {
+        var mapProp = {
+            center: myCenter,
+            zoom: 18,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+        var marker = new google.maps.Marker({
+            position: myCenter,
+        });
+
+        marker.setMap(map);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<div class="float-left" style="width: 39%">
+
+    <h2>CONTACT US </h2>
+
+
+    @using (Html.BeginForm("Contact", "Home"))
+    {
+        <table>
+            <tr>
+                <td>
+                    @Html.Label("NAME")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBox("name","", new{ placeholder = "Enter your name" })
+                </td>
+            </tr>
+            <tr class="spaceUnder">
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("EMAIL ADDRESS")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBox("emailAddress","", new{ placeholder = "Enter your email address"})
+                </td>
+            </tr>
+            <tr class="spaceUnder">
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("CONTACT NUMBER")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBox("contactNumber","", new{ placeholder = "Enter your phone number"})
+                </td>
+            </tr>
+            <tr class="spaceUnder">
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("MESSAGE")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextArea("message","", new{ placeholder = "Short description"})
+                </td>
+            </tr>
+        </table>
+    
+        <button type="button"> Send Message </button>
+    }
+</div>
+
+<div class="float-left" style="width: 39%">
+    
+    <br/> <br/> <br/> <br/> <br/> <br/> 
+    
+    <h2>ADDRESS & DIRECTIONS</h2>
+    
+    <h3>PRASANNA NEONS </h3><br/>
+    <h6>
+        16-2-146/5/B, Malakpet<br/>
+        Palton Chowrastha<br/>
+        Hyderabad<br/>
+        Telangana - 500036<br/> <br/>
+        <p> <img src="~/Content/Icons/Telephone.png" style= "vertical-align:middle"/> : +91 (0) 40 24552606 </p> <br/> <br/>
+    </h6>
+</div>
+<div style="padding-top: 110px">
+    <div id="googleMap" class="float-right">
+        
+    </div>
+</div>

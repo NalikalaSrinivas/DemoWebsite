@@ -1,0 +1,10 @@
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.Data\bin\Debug\PrasannaNeons.Data.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.Data\bin\Debug\PrasannaNeons.Data.pdb
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.Data\bin\Debug\FluentNHibernate.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.Data\bin\Debug\Iesi.Collections.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.Data\bin\Debug\NHibernate.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.Data\bin\Debug\PrasannaNeons.DataEntities.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.Data\bin\Debug\PrasannaNeons.DataEntities.pdb
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.Data\obj\Debug\PrasannaNeons.Data.csprojResolveAssemblyReference.cache
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.Data\obj\Debug\PrasannaNeons.Data.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.Data\obj\Debug\PrasannaNeons.Data.pdb

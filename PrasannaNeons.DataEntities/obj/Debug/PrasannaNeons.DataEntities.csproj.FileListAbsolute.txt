@@ -1,0 +1,8 @@
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.DataEntities\bin\Debug\PrasannaNeons.DataEntities.dll.config
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.DataEntities\bin\Debug\PrasannaNeons.DataEntities.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.DataEntities\bin\Debug\PrasannaNeons.DataEntities.pdb
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.DataEntities\bin\Debug\FluentNHibernate.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.DataEntities\bin\Debug\Iesi.Collections.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.DataEntities\bin\Debug\NHibernate.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.DataEntities\obj\Debug\PrasannaNeons.DataEntities.dll
+D:\PersonalProject\PrasannaNeons\PrasannaNeons.DataEntities\obj\Debug\PrasannaNeons.DataEntities.pdb

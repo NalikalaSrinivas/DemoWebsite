@@ -1,0 +1,80 @@
+﻿@using System.Web.Optimization
+@using Microsoft.Ajax.Utilities
+@using PrasannaNeons
+<!DOCTYPE html>
+@*<html lang="en">*@
+<head>
+    <meta charset="utf-8" />
+    <title>Prasanna Neons - @ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryui")
+</head>
+<div id="wrap">
+    @*page header includes Logo and Title*@
+    <header>
+        <div class="siteName">
+            <p class="site-title">
+                <img src="~/Content/Images/PrasannaNeons.gif" style="height: 70px; width: 350px;"/> 
+                @Html.ActionLink("Customer Portal", "Index", "Home")
+                
+            </p>
+        </div>
+        
+        <div class="loginPartial">
+                @Html.Partial("_LoginPartial")
+        </div>
+    </header>
+    
+    @*Menu*@
+    <nav>
+        <ul>
+            @if (MvcApplication.LoginUser.IsNullOrWhiteSpace())
+            {
+                <li> @Html.ActionLink("Login", "Index", "Account") </li>
+            }
+            else
+            {
+                <li> @using (Html.BeginForm("LogOff","Account", FormMethod.Post, new {id = "logoutForm"}))
+                     {
+                         @Html.AntiForgeryToken()
+                         <span>
+                              <a id="Alogout" href="javascript:document.getElementById('logoutForm').submit()"> Logout </a> 
+                         </span>
+                     } 
+                </li>
+            }
+            
+            <li> @Html.ActionLink("Catalog", "Catalog", "Home") </li>
+            <li> @Html.ActionLink("Contact", "Contact", "Home") </li>
+            <li> @Html.ActionLink("Services", "Index", "Services") </li>
+        </ul>
+    </nav>
+       
+    @*Body*@
+    <div id="main">
+        <section>
+            <article>
+                @RenderSection("featured", false)
+                @RenderBody()
+            </article>
+        </section>
+    </div>
+</div>
+
+@*footer*@
+
+<footer>
+    <small>&copy; 2015 - Prasanna Neons | Malakpet | Hyderabad | India. All rights reserved.</small>
+    <small style="padding-left: 650px"> @Html.ActionLink("Designed & Developed by","DevelopedAndDesigned", "Home",null, new{@class= "actionLink"}) </small>
+</footer>
+
+@Scripts.Render("~/bundles/jquery")
+@RenderSection("scripts", false)
+
+
